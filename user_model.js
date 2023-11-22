@@ -6,7 +6,13 @@ const UserSchema = new Schema({
   firstname: String,
   lastname: String,
 });
+const QuestionSchema = new Schema({
+  question: String,
+  answer: String,
+  author: String,
+});
 
+const QuestionModel = model("question", QuestionSchema);
 const UserModel = model("users", UserSchema);
 
-module.exports = UserModel;
+module.exports = { UserModel, QuestionModel };
